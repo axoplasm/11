@@ -9,11 +9,11 @@ $tile-border-radius: 3px;
 
 $mobile-threshold: $field-width + 20px;
 
-$text-color: #776E65;
-$bright-text-color: #f9f6f2;
+$text-color: #777; // #776E65;
+$bright-text-color: #fff; // #f9f6f2;
 
-$tile-color: #eee4da;
-$tile-gold-color: #edc22e;
+$tile-color: #eee; // #eee4da;
+$tile-gold-color: black; // #edc22e;
 $tile-gold-glow-color: lighten($tile-gold-color, 15%);
 
 $game-container-margin-top: 40px;
@@ -336,17 +336,17 @@ hr {
   $limit: 11;
 
   // Colors for all 11 states, false = no special color
-  $special-colors: false false, // 2
-                   false false, // 4
-                   #f78e48 true, // 8
-                   #fc5e2e true, // 16
-                   #ff3333 true, // 32
-                   #ff0000 true, // 64
-                   false true, // 128
-                   false true, // 256
-                   false true, // 512
-                   false true, // 1024
-                   false true; // 2048
+  $special-colors: false false, // 1
+                   false false, // 2
+                   false true, // lighten(black, 75%) true, // #f78e48 true, // 3
+                   false true, // lighten(black, 50%) true, // #fc5e2e true, // 4
+                   false true, // lighten(black, 25%) true, // #ff3333 true, // 5
+                   false true, // lighten(black, 10%) true, // #ff0000 true, // 6
+                   false true, // 7
+                   false true, // 8
+                   false true, // 9
+                   false true, // 10
+                   false true; // 11
 
   // Build tile colors
   @while $exponent <= $limit {
