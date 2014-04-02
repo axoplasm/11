@@ -1,6 +1,8 @@
 @import "helpers";
 @import "fonts/clear-sans.css";
 
+$purpur: hsl(254,59,53); // base color
+
 $field-width: 500px;
 $grid-spacing: 15px;
 $grid-row-cells: 4;
@@ -9,15 +11,15 @@ $tile-border-radius: 3px;
 
 $mobile-threshold: $field-width + 20px;
 
-$text-color: #777; // #776E65;
+$text-color: desaturate($purpur, 30%); // #777; // #776E65;
 $bright-text-color: #fff; // #f9f6f2;
 
-$tile-color: #eee; // #eee4da;
-$tile-gold-color: black; // #edc22e;
+$tile-color: lighten($purpur, 40%); // #eee; // #eee4da;
+$tile-gold-color: darken($purpur, 10%); // #edc22e;
 $tile-gold-glow-color: lighten($tile-gold-color, 15%);
 
 $game-container-margin-top: 40px;
-$game-container-background: #aeaeae; // #bbada0;
+$game-container-background: white; // #aeaeae; // #bbada0;
 
 $transition-speed: 100ms;
 
@@ -127,7 +129,7 @@ h1.title {
   line-height: $height + 22px;
   font-weight: bold;
   border-radius: 3px;
-  color: white;
+  color: $text-color;
   margin-top: 8px;
   text-align: center;
 
@@ -420,7 +422,7 @@ hr {
 
   // Colors for all 11 states, false = no special color
   $special-colors: false false, // 1
-                   false false, // 2
+                   false true, // 2
                    false true, // lighten(black, 75%) true, // #f78e48 true, // 3
                    false true, // lighten(black, 50%) true, // #fc5e2e true, // 4
                    false true, // lighten(black, 25%) true, // #ff3333 true, // 5
@@ -429,7 +431,7 @@ hr {
                    false true, // 8
                    false true, // 9
                    false true, // 10
-                   false true; // 11
+                   black true; // 11
 
   // Build tile colors
   @while $exponent <= $limit {
