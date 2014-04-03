@@ -421,17 +421,17 @@ hr {
   $limit: 11;
 
   // Colors for all 11 states, false = no special color
-  $special-colors: false false, // 1
-                   false true, // 2
-                   false true, // lighten(black, 75%) true, // #f78e48 true, // 3
-                   false true, // lighten(black, 50%) true, // #fc5e2e true, // 4
-                   false true, // lighten(black, 25%) true, // #ff3333 true, // 5
-                   false true, // lighten(black, 10%) true, // #ff0000 true, // 6
-                   false true, // 7
-                   false true, // 8
-                   false true, // 9
-                   false true, // 10
-                   black true; // 11
+  $special-colors: hsl(120,100,28) true, // 1
+                   hsl(149,60,31) true, // 2
+                   hsl(187,34,35) true, // 3
+                   hsl(223,31,47) true, // 4
+                   hsl(252,61,60) true, // 5
+                   hsl(253,46,53) true, // 6
+                   hsl(252,40,47) true, // 7
+                   hsl(252,39,36) true, // 8
+                   hsl(252,36,27) true, // 9
+                   hsl(240,14,10) true, // 10
+                   hsl(0,0,0) true; // 11
 
   // Build tile colors
   @while $exponent <= $limit {
